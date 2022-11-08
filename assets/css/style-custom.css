@@ -1,0 +1,171 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  /* --header-height: 3rem; */
+  --font-semi: 600;
+}
+
+/*===== Colores =====*/
+:root {
+  --first-color: #4070F4;
+  --second-color: #0E2431;
+}
+
+/*===== Fuente y tipografia =====*/
+:root {
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+
+/*===== z index =====*/
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--second-color);
+  background-image: url('../images/piqsels.com-id-fpvni.jpg');
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Autumn in November";
+  src: url(../fonts/Autumn_in_November.ttf);
+}
+
+@font-face {
+  font-family: "CaviarDreams_Bold";
+  src: url(../fonts/CaviarDreams_Bold.ttf);
+}
+
+@font-face {
+  font-family: "Olivia-Regular";
+  src: url(../fonts/Olivia-Regular.otf);
+}
+
+
+#home {
+  /* background: #10031b;  */
+  /* margin-left:20px; */
+  /* margin: auto;  */
+  margin-top: 0px;
+  padding: 20px;
+  /* padding: auto;     */
+}
+
+#first_page {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+#cover-undangan {
+  background-image: url("../../assets/images/bingkai-undangan-34119.png");
+  background-size: 100% 100%;
+  background-position: 90% center;
+  /* font-family: "CaviarDreams_Bold"; */
+  color: #0E2431;
+}
+
+#undangan {
+  font-family: "CaviarDreams_Bold";
+  font-weight: bold;
+}
+
+#text-mempelai {
+  font-family: "Autumn in November";
+  color: #4070F4;
+}
+
+.home_tittle_acara {
+  font-family: "CaviarDreams_Bold";
+}
+
+/* #foto_mempelai1, #foto_mempelai2 { */
+/* width: 40%;
+  height: 50%; */
+/* border-radius: 50%; */
+/* } */
+
+#mempelai {
+  margin-top: 150px;
+}
+
+.container {
+  margin-top: 0;
+}
+
+.no-rekening {
+  /* width: 30%; */
+  margin: auto;
+  border-radius: 5px;
+}
+
+.no-rekening input {
+  border: none;
+  font-size: 20pt;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.no-rekening input:disabled {
+  background-color: whitesmoke;
+}
+
+
+
+.animation {
+  animation-delay: 2s;
+  transition-delay: 2s;
+}
+
+
+/* -------- */
+
+
+.col-md-3 {
+  width: 50%;
+  clear: both;
+}
+
+.col-md-3:hover {
+  width: 100%;
+}
