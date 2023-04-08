@@ -58,7 +58,8 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
-  background-image: url('../images/piqsels.com-id-fpvni.jpg');
+  background: whitesmoke;
+  /* background-image: url('../images/piqsels.com-id-fpvni.jpg'); */
 }
 
 h1,
@@ -138,7 +139,21 @@ p {
 
 #text__mempelai {
   font-family: "Autumn in November";
-  color: #4070F4;
+  color: #d69600;
+}
+
+.cover #text_mempelai_cover {
+  font-family: "Autumn in November";
+  color: #FFBF00;
+}
+
+.nama__tamu {
+  padding: 10px;
+  margin-top: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  border: 1px solid white;
 }
 
 .home_tittle_acara {
@@ -185,6 +200,10 @@ p {
 .animation {
   animation-delay: 2s;
   transition-delay: 2s;
+}
+
+#inputBank1, #inputBank2 {
+  background: #85a6ff;
 }
 
 
