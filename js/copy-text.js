@@ -13,7 +13,7 @@ function copyBank1() {
   // alert("Copied the text: " + copyText.value);
 
   //show toast / popup
-  var x = document.getElementById("snackbar");
+  var x = document.getElementById("snackbar1");
   x.className = "show";
   setTimeout(function () {
     x.className = x.className.replace("show", "");
@@ -35,7 +35,7 @@ function copyBank2() {
   // alert("Copied the text: " + copyText.value);
 
   //show toast / popup
-  var x = document.getElementById("snackbar");
+  var x = document.getElementById("snackbar2");
   x.className = "show";
   setTimeout(function () {
     x.className = x.className.replace("show", "");

@@ -34,11 +34,11 @@ const sr = ScrollReveal({
 });
 
 /*SCROLL HOME*/
-sr.reveal('.container',{}); 
+sr.reveal('.containerrrr',{}); 
 sr.reveal('.button',{delay: 200}); 
-sr.reveal('.home',{delay: 400}); 
+sr.reveal('.homeee',{delay: 400}); 
 sr.reveal('.home__text',{delay: 600}); 
-sr.reveal('.gallery',{delay:500})
+sr.reveal('.galleryyyy',{delay:500})
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('home__title',{delay:400});
 

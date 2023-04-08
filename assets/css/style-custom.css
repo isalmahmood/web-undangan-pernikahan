@@ -49,6 +49,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
 }
 
 body {
@@ -82,11 +83,36 @@ p {
 }
 
 
+#cover {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: #0E2431;
+  color: azure;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#00000070, #00000090), url('../images/170760327_784660532461143_7965157172761588213_n.jpg');
+  background-size: 100% 100%;
+}
+
+.content_cover{
+  width: 100%;
+}
+
+.content_cover #text_mempelai_cover {
+  font-family: "Autumn in November";
+  font-size: 50pt;
+  color: #d28bfc;
+}
+
+
+
 #home {
   /* background: #10031b;  */
   /* margin-left:20px; */
   /* margin: auto;  */
-  margin-top: 0px;
   padding: 20px;
   /* padding: auto;     */
 }
@@ -110,7 +136,7 @@ p {
   font-weight: bold;
 }
 
-#text-mempelai {
+#text__mempelai {
   font-family: "Autumn in November";
   color: #4070F4;
 }
@@ -126,7 +152,11 @@ p {
 /* } */
 
 #mempelai {
-  margin-top: 150px;
+  
+}
+
+#lokasi {
+  margin-bottom: 100px;
 }
 
 .container {
