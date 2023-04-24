@@ -130,6 +130,7 @@ p {
   background-position: 90% center;
   /* font-family: "CaviarDreams_Bold"; */
   color: #0E2431;
+  min-height: 500px;
 }
 
 #undangan {
@@ -195,6 +196,33 @@ p {
   background-color: whitesmoke;
 }
 
+.box__comments{
+  min-height: 40%;
+  height: 500px;
+  background: #f2e7fc;
+}
+
+.chat__box {
+background: #ffffff;
+
+}
+
+.chat__box::before{
+  content : ' ';
+  position: relative;
+  /* top: 0; */
+  right: 10px;
+  top: -15px;
+  width: 50px;
+  height: 30px;
+  /* border-bottom:solid 120px yellow;
+	border-left:solid 80px transparent;
+	border-right:solid 80px transparent; */
+  background: linear-gradient(-255deg, #ffffff 50%, #ffffff 0%, transparent 50%, transparent);
+  transform: rotate(90deg);
+}
+
+
 
 
 .animation {
@@ -217,4 +245,16 @@ p {
 
 .col-md-3:hover {
   width: 100%;
+}
+
+.gold__text {
+  color: #d69600;
+}
+
+.font__autumn {
+  font-family: "Autumn in November";
+}
+
+.text__heading{
+  font-family: "CaviarDreams_Bold" !important;
 }

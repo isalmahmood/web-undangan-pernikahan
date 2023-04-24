@@ -18,8 +18,13 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Keluarkan hasil dalam elemen dengan id = "demo"
-  document.getElementById("textTimeCountdown").innerHTML = days + " Hari, " + hours + "Jam, "
-  + minutes + "menit, " + seconds + "detik ";
+  document.getElementById("textTimeHari").innerHTML = days;
+  document.getElementById("textTimeJam").innerHTML = hours;
+  document.getElementById("textTimeMenit").innerHTML = minutes;
+  document.getElementById("textTimeDetik").innerHTML = seconds;
+
+  // document.getElementById("textTimeCountdown").innerHTML = days + "Hari, " + hours + "Jam, "
+  // + minutes + "menit, " + seconds + "detik ";
     
   // Jika hitungan mundur selesai, tulis beberapa teks 
   if (distance < 0) {
