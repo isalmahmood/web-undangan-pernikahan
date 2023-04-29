@@ -207,20 +207,24 @@ background: #ffffff;
 
 }
 
-.chat__box::before{
-  content : ' ';
-  position: relative;
+.carousel-inner .carousel-item {
+  transition-duration: .5s;
+}
+
+/* .chat__box::before{ */
+  /* content : ' '; */
+  /* position: relative; */
   /* top: 0; */
-  right: 10px;
-  top: -15px;
-  width: 50px;
-  height: 30px;
+  /* left: 20px; */
+  /* top: 15px; */
+  /* width: 50px; */
+  /* height: 30px; */
   /* border-bottom:solid 120px yellow;
 	border-left:solid 80px transparent;
 	border-right:solid 80px transparent; */
-  background: linear-gradient(-255deg, #ffffff 50%, #ffffff 0%, transparent 50%, transparent);
-  transform: rotate(90deg);
-}
+  /* background: linear-gradient(-255deg, #ffffff 50%, #ffffff 0%, transparent 50%, transparent); */
+  /* transform: rotate(0deg); */
+/* } */
 
 
 

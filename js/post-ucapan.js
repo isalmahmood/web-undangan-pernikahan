@@ -1,10 +1,13 @@
 const scriptURL =
-    'https://script.google.com/macros/s/AKfycbyciSjP-FFIyNi40Jc0S31-0qKODfW6giTd8n0bBNG__sE_QAeylrUyBsnw_kDVh8Z-yA/exec'
+    'https://script.google.com/macros/s/AKfycbwa40BJVfrpDebwinFBPXd3zZkCibwgmK6HEDXnWD40wOOadxYpwR2i3N-78S3DQBv4aA/exec'
 const form = document.forms['form-ucapan-pernikahan']
 const btnKirim = document.querySelector('.btn__kirim')
 const btnLoading = document.querySelector('.btn__loading')
+const boxComments = document.querySelector('.box__comments')
 let characterInput = document.getElementById('setCharacter')
 // let statusAlert = false;
+
+fetchData();
 
 form.addEventListener('submit', e => {
     e.preventDefault()
@@ -12,6 +15,10 @@ form.addEventListener('submit', e => {
     // tampilkan tombol loading, hilangkan tombol kirim
     btnLoading.classList.toggle('d-none');
     btnKirim.classList.toggle('d-none');
+    // let idUcapan = document.getElementById('idUcapan');
+          let tanggal = document.getElementById('tanggal');
+        //   let dateForId = Date.now();
+          let d = new Date();
 
     fetch(scriptURL, {
             method: 'POST',
@@ -22,9 +29,11 @@ form.addEventListener('submit', e => {
             btnLoading.classList.toggle('d-none');
             btnKirim.classList.toggle('d-none');
             console.log('Success!', response)
+            fetchData();
             //reset form
             form.reset();
-            // alert('Succes!', response);
+            // idUcapan.value = dateForId;
+          tanggal.value = d.toString();
             characterInput.innerHTML = 0;
             // statusAlert = true;
             //       if(statusAlert == true) {
@@ -37,7 +46,8 @@ form.addEventListener('submit', e => {
             })
         })
         .catch((error) => {
-            btnLoading.classList.toggle('d-none');
+            characterInput.innerHTML = 0;
+            // btnLoading.classList.toggle('d-none');
             btnKirim.classList.toggle('d-none');
             Swal.fire({
                 icon: 'error',
@@ -47,3 +57,39 @@ form.addEventListener('submit', e => {
             console.error('Error!', error.message)
         })
 })
+
+// get data ucapan
+// $('document').ready(function () {
+//     setInterval(function () { getData()}, 1000); // panggil setiap 10 detik
+// }); 
+
+
+    function fetchData() {
+       let setData = document.getElementById('boxComments');
+    fetch('https://script.google.com/macros/s/AKfycbwa40BJVfrpDebwinFBPXd3zZkCibwgmK6HEDXnWD40wOOadxYpwR2i3N-78S3DQBv4aA/exec')
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data.data)
+        let output = ""
+        let no =1;
+        data.data.forEach(el => {
+            output += `
+            <div `+(no++)+` class=" p-2 my-3 shadow chat__box" style="border-radius: 2mm;">
+          <div>
+            <div class="row bd-highlight ">
+              <div class="col-6 bd-highlight">
+                <h5 class="fw-bold mb-0">${el.NAMA}</h5>
+              </div>
+              <div class="col-6 d-flex justify-content-end bd-highlight" style="opacity: 50%;">
+                <p class="mb-0" style="font-size: 10pt;">${el.tanggal}</p>
+              </div>
+            </div>
+            <hr>
+            <p class="mb-0" style="text-align: justify; color: black;"> ${el.UCAPAN}</p>
+          </div>
+          </div>
+            `
+        });
+        setData.innerHTML = output
+    })
+  }

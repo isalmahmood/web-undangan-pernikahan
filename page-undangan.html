@@ -23,8 +23,10 @@
   <link rel="stylesheet" href="lib/animate-on-scroll/aos.css" />
   <link rel="stylesheet" href="lib/animate-on-scroll/aos.css" />
   <link rel="stylesheet" href="assets/css/sweetAlert2/sweetalert2.min.css">
-
-  <title>undangan</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <title>Undangan Pernikahan</title>
 
 </head>
 
@@ -34,7 +36,7 @@
 
 
   <!-- Main Content -->
-  <div id="mainContent" class="main__content ">
+  <div id="mainContent" class="main__content shadow">
 
     <!-- bottom menu -->
     <nav class="nav">
@@ -171,6 +173,40 @@
           </button>
         </div>
       </div>
+
+      <div class=" px-3 container">
+        <div class="row p-1">
+          <div class="col-6 p-2" data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000"
+            data-aos-easing="ease-in-out" data-aos-once="true" data-aos-delay="1000">
+            <div style=" background: grey;">
+              <img
+                src="https://disk.mediaindonesia.com/thumbs/1800x1200/news/2021/10/9cba373975cb4fc93984228d7804edb1.jpeg"
+                class="img-fluid" alt="...">
+            </div>
+          </div>
+          <div class="col-6 p-2" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out"
+            data-aos-once="true">
+            <div style=" background: grey;">
+              <img
+                src="https://disk.mediaindonesia.com/thumbs/1800x1200/news/2021/10/9cba373975cb4fc93984228d7804edb1.jpeg"
+                class="img-fluid" alt="...">
+            </div>
+          </div>
+          <div class="col-6 p-2" data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-out"
+            data-aos-once="true">
+            <img
+              src="https://disk.mediaindonesia.com/thumbs/1800x1200/news/2021/10/9cba373975cb4fc93984228d7804edb1.jpeg"
+              class="img-fluid border" alt="...">
+          </div>
+          <div class="col-6 p-2" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease-in-out"
+            data-aos-once="true">
+            <img
+              src="https://disk.mediaindonesia.com/thumbs/1800x1200/news/2021/10/9cba373975cb4fc93984228d7804edb1.jpeg"
+              class="img-fluid" alt="...">
+
+          </div>
+        </div>
+      </div>
     </section>
 
     <br>
@@ -245,278 +281,94 @@
 
     <section class="home bg-image container">
       <h1 class="text-center text__heading mb-2">Doa & Restu</h1>
-      <div class="box__comments p-3 overflow-auto shadow mb-4" data-spy="scroll">
+      <div id="boxComments" class="box__comments p-3 overflow-auto shadow mb-4" data-spy="scroll">
 
-
-        <div class="d-flex justify-content-start p-2 my-3 shadow chat__box" style="border-radius: 2mm;">
+        <div class=" p-2 my-3 shadow chat__box" style="border-radius: 2mm;">
           <div>
-            <div class="d-flex justify-content-between bd-highlight ">
-              <div class=" bd-highlight">
-                <h5 class="fw-bold mb-0">Maggie Marsh</h5>
+            <div class="row bd-highlight ">
+              <div class="col-6 bd-highlight">
+                <h5 class="fw-bold mb-0">Anonim</h5>
               </div>
-              <div class=" bd-highlight" style="opacity: 50%;">
-                <p class="mb-0">
+              <div class="col-6 bd-highlight d-flex justify-content-end" style="opacity: 50%;">
+                <p class="mb-0" style="text-align: left;">
                   March 07, 2021</p>
               </div>
             </div>
             <hr>
-            <p class="mb-0" style="text-align: justify; color: black;">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem ab, enim voluptatibus numquam aperiam
-              eius, optio, cum eos necessitatibus cumque aliquid. Velit, illo. Asperiores saepe voluptate assumenda
-              atque nemo illum velit, dolorem dolores earum ducimus amet nobis aliquid fugit itaque? Officiis suscipit
-              ea sunt. Cupiditate non illum dolor hic consequatur adipisci praesentium magni. Hic laborum tempore
-              similique sunt laboriosam explicabo quidem corporis. Beatae eius aperiam eveniet dicta deleniti enim ad
-              eligendi delectus excepturi consequatur veniam, non, in quis quo perferendis quas. Quod sit necessitatibus
-              officiis, quam illum magni perferendis, ratione quis neque adipisci, at corporis facilis aut cum saepe
-              aperiam?
-            </p>
+            <p class="mb-0" style="text-align: justify; color: black;"> Lorem ipsum </p>
           </div>
         </div>
-        <div class="d-flex flex-start bg-light p-1 my-3 shadow" style="border-radius: 2mm;">
-          <img class="rounded-circle shadow-1-strong me-3"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(23).webp" alt="avatar" width="60" height="60" />
-          <div>
-            <h6 class="fw-bold mb-1">Maggie Marsh</h6>
-            <div class="d-flex align-items-center mb-3">
-              <p class="mb-0">
-                March 07, 2021
-                <span class="badge bg-primary">Pending</span>
-              </p>
-              <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-redo-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-heart ms-2"></i></a>
-            </div>
-            <p class="mb-0">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text ever
-              since the 1500s, when an unknown printer took a galley of type and
-              scrambled it.
-            </p>
-          </div>
-        </div>
-        <div class="d-flex flex-start bg-light p-1 my-3 shadow" style="border-radius: 2mm;">
-          <img class="rounded-circle shadow-1-strong me-3"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(23).webp" alt="avatar" width="60" height="60" />
-          <div>
-            <h6 class="fw-bold mb-1">Maggie Marsh</h6>
-            <div class="d-flex align-items-center mb-3">
-              <p class="mb-0">
-                March 07, 2021
-                <span class="badge bg-primary">Pending</span>
-              </p>
-              <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-redo-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-heart ms-2"></i></a>
-            </div>
-            <p class="mb-0">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text ever
-              since the 1500s, when an unknown printer took a galley of type and
-              scrambled it.
-            </p>
-          </div>
-        </div>
-        <div class="d-flex flex-start bg-light p-1 my-3 shadow" style="border-radius: 2mm;">
-          <img class="rounded-circle shadow-1-strong me-3"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(23).webp" alt="avatar" width="60" height="60" />
-          <div>
-            <h6 class="fw-bold mb-1">Maggie Marsh</h6>
-            <div class="d-flex align-items-center mb-3">
-              <p class="mb-0">
-                March 07, 2021
-                <span class="badge bg-primary">Pending</span>
-              </p>
-              <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-redo-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-heart ms-2"></i></a>
-            </div>
-            <p class="mb-0">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text ever
-              since the 1500s, when an unknown printer took a galley of type and
-              scrambled it.
-            </p>
-          </div>
-        </div>
-        <div class="d-flex flex-start bg-light p-1 my-3 shadow" style="border-radius: 2mm;">
-          <img class="rounded-circle shadow-1-strong me-3"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(23).webp" alt="avatar" width="60" height="60" />
-          <div>
-            <h6 class="fw-bold mb-1">Maggie Marsh</h6>
-            <div class="d-flex align-items-center mb-3">
-              <p class="mb-0">
-                March 07, 2021
-                <span class="badge bg-primary">Pending</span>
-              </p>
-              <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-redo-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-heart ms-2"></i></a>
-            </div>
-            <p class="mb-0">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text ever
-              since the 1500s, when an unknown printer took a galley of type and
-              scrambled it.
-            </p>
-          </div>
-        </div>
-        <div class="d-flex flex-start bg-light p-1 my-3 shadow" style="border-radius: 2mm;">
-          <img class="rounded-circle shadow-1-strong me-3"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(23).webp" alt="avatar" width="60" height="60" />
-          <div>
-            <h6 class="fw-bold mb-1">Maggie Marsh</h6>
-            <div class="d-flex align-items-center mb-3">
-              <p class="mb-0">
-                March 07, 2021
-                <span class="badge bg-primary">Pending</span>
-              </p>
-              <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-redo-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-heart ms-2"></i></a>
-            </div>
-            <p class="mb-0">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text ever
-              since the 1500s, when an unknown printer took a galley of type and
-              scrambled it.
-            </p>
-          </div>
-        </div>
-        <div class="d-flex flex-start bg-light p-1 my-3 shadow" style="border-radius: 2mm;">
-          <img class="rounded-circle shadow-1-strong me-3"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(23).webp" alt="avatar" width="60" height="60" />
-          <div>
-            <h6 class="fw-bold mb-1">Maggie Marsh</h6>
-            <div class="d-flex align-items-center mb-3">
-              <p class="mb-0">
-                March 07, 2021
-                <span class="badge bg-primary">Pending</span>
-              </p>
-              <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-redo-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-heart ms-2"></i></a>
-            </div>
-            <p class="mb-0">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text ever
-              since the 1500s, when an unknown printer took a galley of type and
-              scrambled it.
-            </p>
-          </div>
-        </div>
-        <div class="d-flex flex-start bg-light p-1 my-3 shadow" style="border-radius: 2mm;">
-          <img class="rounded-circle shadow-1-strong me-3"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(23).webp" alt="avatar" width="60" height="60" />
-          <div>
-            <h6 class="fw-bold mb-1">Maggie Marsh</h6>
-            <div class="d-flex align-items-center mb-3">
-              <p class="mb-0">
-                March 07, 2021
-                <span class="badge bg-primary">Pending</span>
-              </p>
-              <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-redo-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-heart ms-2"></i></a>
-            </div>
-            <p class="mb-0">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text ever
-              since the 1500s, when an unknown printer took a galley of type and
-              scrambled it.
-            </p>
-          </div>
-        </div>
-        <div class="d-flex flex-start bg-light p-1 my-3 shadow" style="border-radius: 2mm;">
-          <img class="rounded-circle shadow-1-strong me-3"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(23).webp" alt="avatar" width="60" height="60" />
-          <div>
-            <h6 class="fw-bold mb-1">Maggie Marsh</h6>
-            <div class="d-flex align-items-center mb-3">
-              <p class="mb-0">
-                March 07, 2021
-                <span class="badge bg-primary">Pending</span>
-              </p>
-              <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-redo-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-heart ms-2"></i></a>
-            </div>
-            <p class="mb-0">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text ever
-              since the 1500s, when an unknown printer took a galley of type and
-              scrambled it.
-            </p>
-          </div>
-        </div>
-        <div class="d-flex flex-start bg-light p-1 my-3 shadow" style="border-radius: 2mm;">
-          <img class="rounded-circle shadow-1-strong me-3"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(23).webp" alt="avatar" width="60" height="60" />
-          <div>
-            <h6 class="fw-bold mb-1">Maggie Marsh</h6>
-            <div class="d-flex align-items-center mb-3">
-              <p class="mb-0">
-                March 07, 2021
-                <span class="badge bg-primary">Pending</span>
-              </p>
-              <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-redo-alt ms-2"></i></a>
-              <a href="#!" class="link-muted"><i class="fas fa-heart ms-2"></i></a>
-            </div>
-            <p class="mb-0">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text ever
-              since the 1500s, when an unknown printer took a galley of type and
-              scrambled it.
-            </p>
-          </div>
-        </div>
-
 
       </div>
-  </div>
-  <h5 class="text-center text__heading mt-2">Ketik doa untuk mempelai</h5>
-  <div class="container">
-    <form name="form-ucapan-pernikahan" class="home bg-image p-3 ">
-      <div class="mb-3">
-        <input name="idUcapan" id="idUcapan" type="text" class="form-control" maxlength="100" hidden>
-        <label for="exampleInputPassword1" class="form-label">Nama</label>
-        <input name="NAMA" type="text" class="form-control" id="exampleInputPassword1" maxlength="20"
-          placeholder="Ketik nama Anda" required>
+
+      <h5 class="text-center text__heading mt-2">Ketik doa untuk mempelai</h5>
+      <div class="container">
+        <form name="form-ucapan-pernikahan" class="home bg-image p-3 ">
+          <div class="mb-3">
+            <!-- <input name="idUcapan" id="idUcapan" type="text" class="form-control" maxlength="100" hidden> -->
+            <label for="exampleInputPassword1" class="form-label">Nama</label>
+            <input name="NAMA" type="text" class="form-control" id="exampleInputPassword1" maxlength="20"
+              placeholder="Ketik nama Anda" required>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Doa untuk mempelai</label>
+            <textarea name="UCAPAN" class="form-control" onkeyup="getCharacter()" id="textAreaExample" rows="4"
+              placeholder="Ketik Doa" maxlength="200" required></textarea>
+            <input name="TANGGAL" id="tanggal" type="text" class="form-control" maxlength="200" hidden>
+            <div class="form-text"><span id="setCharacter">0</span> / Maksimal 200 Karakter</div>
+            <script>
+              // let idUcapan = document.getElementById('idUcapan');
+              let tanggal = document.getElementById('tanggal');
+              // let dateForId = Date.now();
+              let d = new Date();
+
+              // idUcapan.value = dateForId;
+              tanggal.value = d.toString();
+
+              function getCharacter() {
+                let text = document.getElementById('textAreaExample');
+                let characterInput = document.getElementById('setCharacter');
+                let jmlCharacter = text.value.length;
+                characterInput.innerHTML = jmlCharacter;
+              }
+            </script>
+          </div>
+          <button type="submit" class="btn btn-primary btn__kirim">Submit</button>
+          <button class="btn btn-primary btn__loading d-none" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Loading...
+          </button>
+        </form>
+        <div id="fetchData"></div>
+        <script src="js/post-ucapan.js"></script>
+
       </div>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Doa untuk mempelai</label>
-        <textarea name="UCAPAN" class="form-control" onkeyup="getCharacter()" id="textAreaExample" rows="4"
-          placeholder="Ketik Doa" maxlength="200" required></textarea>
-          <input name="TANGGAL" id="tanggal" type="text" class="form-control" maxlength="200" hidden>
-        <div class="form-text"><span id="setCharacter">0</span> / Maksimal 200 Karakter</div>
-        <script>
-          let idUcapan = document.getElementById('idUcapan');
-          let tanggal = document.getElementById('tanggal');
-          let dateForId = Date.now();
-          let d = new Date();
-
-          idUcapan.value = dateForId;
-          tanggal.value = d.toString();
-
-          function getCharacter() {
-            let text = document.getElementById('textAreaExample');
-            let characterInput = document.getElementById('setCharacter');
-            let jmlCharacter = text.value.length;
-            characterInput.innerHTML = jmlCharacter;
-          }
-        </script>
-      </div>
-      <button type="submit" class="btn btn-primary btn__kirim">Submit</button>
-      <button class="btn btn-primary btn__loading d-none" type="button" disabled>
-        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-        Loading...
-      </button>
-    </form>
-<script src="js/post-ucapan.js"></script>
-
-  </div>
   </div>
   </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+  <script>
+    //     $.ajax({
+    // url: 'https://script.google.com/macros/s/AKfycbwa40BJVfrpDebwinFBPXd3zZkCibwgmK6HEDXnWD40wOOadxYpwR2i3N-78S3DQBv4aA/exec',
+    // type: 'GET',
+    // dataType: 'json',
+    // succes: res => console.log(res.data),
+    // error: err => console.log(err)
+    // })
+    //    $.ajax({
+    //     url: 'https://script.google.com/macros/s/AKfycbwa40BJVfrpDebwinFBPXd3zZkCibwgmK6HEDXnWD40wOOadxYpwR2i3N-78S3DQBv4aA/exec',
+    //     type: 'GET',
+    //     dataType: 'json',
+    //     success: function(res) {
+    //         $('#tabeldata').html(res);
+    //         console.log(res)
+    //     },
+    //     error: err => console.log(err), 
+    // });
+  </script>
 
   <!-- Footer -->
   <div style="margin-top: 200px; padding-bottom: 70px; background: #ab40f1;" class="footer">
@@ -527,8 +379,6 @@
   </div>
 
   </div>
-
-
 
 
   <script src="js/copy-text.js"></script>
