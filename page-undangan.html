@@ -22,6 +22,7 @@
   <!-- <script src="js/bootstrap.min.js"></script> -->
   <link rel="stylesheet" href="lib/animate-on-scroll/aos.css" />
   <link rel="stylesheet" href="lib/animate-on-scroll/aos.css" />
+  <link rel="stylesheet" href="assets/css/sweetAlert2/sweetalert2.min.css">
 
   <title>undangan</title>
 
@@ -75,13 +76,13 @@
               <br>
               <div class="d-flex justify-content-center bd-highlight mt-2 mb-3 ">
                 <div class="p-2 bd-highlight rounded bg-primary text-light mx-1">
-                  <span id="textTimeHari" class="fw-bold"></span><br>Hari</div> 
+                  <span id="textTimeHari" class="fw-bold"></span><br>Hari</div>
                 <div class="p-2 bd-highlight rounded bg-primary text-light mx-1">
-                  <span id="textTimeJam" class="fw-bold"></span><br>Jam</div> 
+                  <span id="textTimeJam" class="fw-bold"></span><br>Jam</div>
                 <div class="p-2 bd-highlight rounded bg-primary text-light mx-1">
-                  <span id="textTimeMenit" class="fw-bold"></span><br>Menit</div> 
+                  <span id="textTimeMenit" class="fw-bold"></span><br>Menit</div>
                 <div class="p-2 bd-highlight rounded bg-primary text-light mx-1">
-                  <span id="textTimeDetik" class="fw-bold"></span><br>Detik</div> 
+                  <span id="textTimeDetik" class="fw-bold"></span><br>Detik</div>
               </div>
               <!-- <strong id="textTimeCountdown"></strong> -->
             </h6>
@@ -475,27 +476,44 @@
   </div>
   <h5 class="text-center text__heading mt-2">Ketik doa untuk mempelai</h5>
   <div class="container">
-    <form class="home bg-image p-3 ">
+    <form name="form-ucapan-pernikahan" class="home bg-image p-3 ">
       <div class="mb-3">
+        <input name="idUcapan" id="idUcapan" type="text" class="form-control" maxlength="100" hidden>
         <label for="exampleInputPassword1" class="form-label">Nama</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" maxlength="20" placeholder="Ketik nama Anda">
+        <input name="NAMA" type="text" class="form-control" id="exampleInputPassword1" maxlength="20"
+          placeholder="Ketik nama Anda" required>
       </div>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Doa untuk mempelai</label>
-        <textarea class="form-control" onkeyup="getCharacter()" id="textAreaExample" rows="4" placeholder="Ketik Doa"
-          maxlength="200"></textarea>
-        <div id="emailHelp" class="form-text"><span id="setCharacter">0</span> / Maksimal 200 Karakter</div>
+        <textarea name="UCAPAN" class="form-control" onkeyup="getCharacter()" id="textAreaExample" rows="4"
+          placeholder="Ketik Doa" maxlength="200" required></textarea>
+          <input name="TANGGAL" id="tanggal" type="text" class="form-control" maxlength="200" hidden>
+        <div class="form-text"><span id="setCharacter">0</span> / Maksimal 200 Karakter</div>
         <script>
+          let idUcapan = document.getElementById('idUcapan');
+          let tanggal = document.getElementById('tanggal');
+          let dateForId = Date.now();
+          let d = new Date();
+
+          idUcapan.value = dateForId;
+          tanggal.value = d.toString();
+
           function getCharacter() {
             let text = document.getElementById('textAreaExample');
-            let character = document.getElementById('setCharacter');
+            let characterInput = document.getElementById('setCharacter');
             let jmlCharacter = text.value.length;
-            character.innerHTML = jmlCharacter;
+            characterInput.innerHTML = jmlCharacter;
           }
         </script>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary btn__kirim">Submit</button>
+      <button class="btn btn-primary btn__loading d-none" type="button" disabled>
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        Loading...
+      </button>
     </form>
+<script src="js/post-ucapan.js"></script>
+
   </div>
   </div>
   </section>
@@ -518,6 +536,7 @@
   <script src="js/animation-up-object.js"></script>
   <script src="lib/animate-on-scroll/aos.js"></script>
   <script src="js/timerCountdown.js"></script>
+  <script src="js/sweetAlert2/sweetalert2@11.js"></script>
 
   <script>
     AOS.init();
