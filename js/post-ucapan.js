@@ -65,14 +65,21 @@ form.addEventListener('submit', e => {
 
 
     function fetchData() {
+      let datas = [];
+      let sortedData = [];
        let setData = document.getElementById('boxComments');
     fetch('https://script.google.com/macros/s/AKfycbwa40BJVfrpDebwinFBPXd3zZkCibwgmK6HEDXnWD40wOOadxYpwR2i3N-78S3DQBv4aA/exec')
     .then((response) => response.json())
     .then((data) => {
-        console.log(data.data)
+      datas = data.data;
+      sortedData = [...datas].sort((a, b) => {
+        return b.idUcapan.localeCompare(a.idUcapan);
+      });
+      datas = sortedData
+      
         let output = ""
         let no =1;
-        data.data.forEach(el => {
+        datas.forEach(el => {
             output += `
             <div `+(no++)+` class=" p-2 my-3 shadow chat__box" style="border-radius: 2mm;">
           <div>

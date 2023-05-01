@@ -37,7 +37,7 @@
       </h1>
       <div class="nama__tamu">
         <h6>Turut Mengundang :</h6>
-        <h4 id="namaTamu">Saudara/i</h4>
+        <h4 id="namaTamu" class="fw-bold">Saudara/i</h4>
       </div>
       <h6 class="text-center mt-2">Akan diselenggarakan pada :</h6>
       <h3 class="text-center">Ahad, 00 Januari, 20xx</h3>
@@ -51,6 +51,9 @@
 
   <script>
     // get nilai Url namaurl?/valuenya
+
+    let namaTamu = document.getElementById("namaTamu");
+    
     function GetURLParameter(sParam)
     {
         var sPageURL = window.location.search.substring(1);
@@ -69,14 +72,20 @@
     // nama.replace(/%20/g, " ");
     // var aksi = GetURLParameter('aksi');
     // document.getElementById("modul").innerHTML = modul;
-    document.getElementById("namaTamu").innerHTML = nama;
+    if(nama.length!=0) {
+
+      namaTamu.innerHTML = nama;
+    } else {
+      namaTamu.innerHTML = "Saudara/i";
+    }
+
     </script>
 
   <script src="js/copy-text.js"></script>
   <script src="js/scrool-reveal-updown.js"></script>
   <script src="js/animation-up-object.js"></script>
   <script src="lib/animate-on-scroll/aos.js"></script>
-  <script src="js/timerCountdown.js"></script>
+  <!-- <script src="js/timerCountdown.js"></script> -->
 
   <script>
     AOS.init();
