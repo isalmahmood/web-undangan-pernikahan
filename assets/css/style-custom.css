@@ -104,7 +104,7 @@ p {
 
 .content_cover #text_mempelai_cover {
   font-family: "Autumn in November";
-  font-size: 50pt;
+  font-size: 40pt;
   color: #d28bfc;
 }
 
@@ -154,11 +154,19 @@ p {
   margin-left: 20%;
   margin-right: 20%;
   text-align: center;
+  border-radius: 1mm;
   border: 1px solid white;
 }
 
 .home_tittle_acara {
   font-family: "CaviarDreams_Bold";
+}
+
+.bg-countdown{
+  background: #85a6ff14;
+}
+.bg-countdown span{
+  color: #0E2431;
 }
 
 /* #foto_mempelai1, #foto_mempelai2 { */
@@ -199,7 +207,7 @@ p {
 .box__comments{
   min-height: 40%;
   height: 500px;
-  background: #f2e7fc;
+  background: #85a6ff14;
 }
 
 .chat__box {
@@ -209,6 +217,10 @@ background: #ffffff;
 
 .carousel-inner .carousel-item {
   transition-duration: .5s;
+}
+
+.footer__text {
+  font-family: "Autumn in November";
 }
 
 /* .chat__box::before{ */
@@ -235,8 +247,10 @@ background: #ffffff;
 }
 
 #inputBank1, #inputBank2 {
-  background: #85a6ff;
+  height: 50px !important;
+  background: #85a6ff26;
 }
+
 
 
 /* -------- */
